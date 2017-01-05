@@ -1,0 +1,9 @@
+[user]
+	name = Henri Bragge
+	email = henri.bragge@esrlabs.com
+[color]
+	ui = auto
+[init]
+	templatedir = ~/.git_template
+[core]
+	autocrlf = false
