@@ -18,13 +18,19 @@ fi
 
 # set PATH so it includes user's private bin directories
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
-setxkbmap -option ctrl:swapcaps
+#setxkbmap -option ctrl:swapcaps
 # disable insert
 xmodmap -e "keycode 118 ="
 
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/bin/diab5.9.4.8/LINUX386/bin:$PATH"
+export PATH="$HOME/jdk1.8.0_131/bin:$PATH"
 export LM_LICENSE_FILE="$HOME/bin/zwrsLicense.lic"
 export CompilerPrefix=sccache
 export PYTHONPATH=/home/henri/work/bcdevo/priv/autosar-py2
 export DOCKER_ID_USER=hbragge
+
+# for diab
+#/sbin/modprobe dummy
+#sudo /sbin/ip link set name eth0 dev dummy0
+#sudo /sbin/ifconfig eth0 hw ether ec:f4:bb:00:60:ba
