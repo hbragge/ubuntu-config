@@ -26,11 +26,15 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/bin/diab5.9.4.8/LINUX386/bin:$PATH"
 export PATH="$HOME/jdk1.8.0_131/bin:$PATH"
 export LM_LICENSE_FILE="$HOME/bin/zwrsLicense.lic"
+export ESRLABS_LICENSE_FILE="$HOME/demo.lic"
 export CompilerPrefix=sccache
-export PYTHONPATH=/home/henri/work/bcdevo/priv/autosar-py2
+export PYTHONPATH=/home/henri/work/bcdevo/priv/autosar-py
+export FLEXNET_ROOT=/home/henri/bin/x64_n6-11.14.0.0_v6
 export DOCKER_ID_USER=hbragge
 
+ulimit -c unlimited
+
 # for diab
-#/sbin/modprobe dummy
+#sudo /sbin/modprobe dummy
 #sudo /sbin/ip link set name eth0 dev dummy0
 #sudo /sbin/ifconfig eth0 hw ether ec:f4:bb:00:60:ba

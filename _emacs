@@ -10,14 +10,14 @@
 (global-set-key [f1] 'increment-selective-display)
 
 ;; Documentation/CodingStyle
-(defun c-lineup-arglist-tabs-only (ignored)
-  "Line up argument lists by tabs, not spaces"
-  (let* ((anchor (c-langelem-pos c-syntactic-element))
-         (column (c-langelem-2nd-pos c-syntactic-element))
-         (offset (- (1+ column) anchor))
-         (steps (floor offset c-basic-offset)))
-    (* (max steps 1)
-       c-basic-offset)))
+;(defun c-lineup-arglist-tabs-only (ignored)
+;  "Line up argument lists by tabs, not spaces"
+;  (let* ((anchor (c-langelem-pos c-syntactic-element))
+;         (column (c-langelem-2nd-pos c-syntactic-element))
+;         (offset (- (1+ column) anchor))
+;         (steps (floor offset c-basic-offset)))
+;    (* (max steps 1)
+;       c-basic-offset)))
 
 ;; disable auto indent
 (when (fboundp 'electric-indent-mode) (electric-indent-mode -1))
@@ -52,6 +52,7 @@
 (setq-default auto-save-interval -1)
 
 (setq-default truncate-lines t)
+(setq-default show-trailing-whitespace t)
 
 ;; visible bell
 (setq visible-bell t)
@@ -73,6 +74,8 @@
 ;; Set tab width to 4
 (setq tab-width 4)
 (setq c-basic-offset 4)
+
+(setq js-indent-level 2)
 
 ;; Disable the splash screen
 (setq inhibit-splash-screen t)
@@ -98,6 +101,7 @@
 )
 
 (add-to-list 'auto-mode-alist '("\\.atm\\|\\.meta\\'" . rtext-lang-mode))
+(add-to-list 'auto-mode-alist '("\\.ts\\'" . js-mode))
 
 (require 'tabbar)
 (tabbar-mode t)
@@ -127,3 +131,10 @@ Emacs buffer are those starting with “*”."
 
 (setq line-number-mode t)
 (setq column-number-mode t)
+
+(defun my-indent-setup ()
+  (c-set-offset 'arglist-intro '+))
+(add-hook 'c++-mode-hook 'my-indent-setup)
+(defun my-indent-setup ()
+  (c-set-offset 'arglist-intro '+))
+(add-hook 'c-mode-hook 'my-indent-setup)
