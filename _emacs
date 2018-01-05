@@ -138,3 +138,6 @@ Emacs buffer are those starting with “*”."
 (defun my-indent-setup ()
   (c-set-offset 'arglist-intro '+))
 (add-hook 'c-mode-hook 'my-indent-setup)
+
+(require 'auto-complete)
+(global-auto-complete-mode t)
