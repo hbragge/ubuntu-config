@@ -31,6 +31,7 @@ export CompilerPrefix=sccache
 export PYTHONPATH=/home/henri/work/bcdevo/priv/autosar-py
 export FLEXNET_ROOT=/home/henri/bin/x64_n6-11.14.0.0_v6
 export DOCKER_ID_USER=hbragge
+export ESR_BSW_ENC_DIR=/home/henri/work/bcdevo/bsw-all/autosar/bsw-tools-lic
 
 ulimit -c unlimited
 

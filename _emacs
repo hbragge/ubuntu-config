@@ -1,13 +1,13 @@
 
-(defun increment-selective-display ()
-  (interactive)
-  (let ((column (if selective-display
-                    (+ selective-display 2) 2)))
-    (if (> column 16)
-        (set-selective-display nil)
-      (set-selective-display column))))
+;(defun increment-selective-display ()
+;  (interactive)
+;  (let ((column (if selective-display
+;                    (+ selective-display 2) 2)))
+;    (if (> column 16)
+;        (set-selective-display nil)
+;      (set-selective-display column))))
 
-(global-set-key [f1] 'increment-selective-display)
+;(global-set-key [f1] 'increment-selective-display)
 
 ;; Documentation/CodingStyle
 ;(defun c-lineup-arglist-tabs-only (ignored)
@@ -141,3 +141,5 @@ Emacs buffer are those starting with “*”."
 
 (require 'auto-complete)
 (global-auto-complete-mode t)
+
+(setq large-file-warning-threshold nil)
