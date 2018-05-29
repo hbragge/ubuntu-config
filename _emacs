@@ -37,7 +37,8 @@
 ;;            (c-set-style "linux-tabs-only")))
 
 (set-foreground-color "grey")
-(set-background-color "black")
+;(set-background-color "black")
+(set-background-color "#202020")
 (set-face-attribute 'region nil :background "#666")
 (set-default-font "Monospace 12")
 (global-font-lock-mode 1)
@@ -75,7 +76,7 @@
 (setq tab-width 4)
 (setq c-basic-offset 4)
 
-(setq js-indent-level 2)
+(setq js-indent-level 4)
 
 ;; Disable the splash screen
 (setq inhibit-splash-screen t)
