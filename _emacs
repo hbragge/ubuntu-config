@@ -20,6 +20,9 @@
 ;       c-basic-offset)))
 
 ;; disable auto indent
+
+(package-initialize)
+
 (when (fboundp 'electric-indent-mode) (electric-indent-mode -1))
 
 ;;(add-hook 'c-mode-common-hook
@@ -52,7 +55,7 @@
 (setq-default auto-save-default nil)
 (setq-default auto-save-interval -1)
 
-(setq-default truncate-lines t)
+(setq-default truncate-lines nil)
 (setq-default show-trailing-whitespace t)
 
 ;; visible bell
