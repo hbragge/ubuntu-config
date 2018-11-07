@@ -147,3 +147,9 @@ Emacs buffer are those starting with “*”."
 (global-auto-complete-mode t)
 
 (setq large-file-warning-threshold nil)
+
+(add-hook 'go-mode-hook
+  (lambda ()
+    (add-hook 'before-save-hook 'gofmt-before-save)
+    (setq tab-width 4)
+    (setq indent-tabs-mode nil)))
