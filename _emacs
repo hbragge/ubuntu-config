@@ -89,7 +89,7 @@
 ;(add-to-list 'load-path "~/.emacs.d")    ; This may not be appeared if you have already added.
 ;(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
 
-(setq myKeywords
+(setq rtextKeywords
  '(("#.*" . font-lock-comment-face)
    ("@.*" . font-lock-preprocessor-face)
    ("[a-zA-Z_0-9]+:" . font-lock-variable-name-face)
@@ -100,12 +100,29 @@
 )
 
 (define-derived-mode rtext-lang-mode fundamental-mode
-  (setq font-lock-defaults '(myKeywords))
+  (setq font-lock-defaults '(rtextKeywords))
   (setq mode-name "rtext")
 )
 
+(setq fidlKeywords
+ '(("#.*" . font-lock-comment-face)
+   ("[a-zA-Z_0-9]+:" . font-lock-variable-name-face)
+   ("^[ \t]*\\(import\\|define\\|method\\|instance\\|package\\|interface\\|typedef\\|array\\|enumeration\\|in\\|out\\|version\\|broadcast\\) " . font-lock-type-face)
+   ("^[ \t]*\\(in\\|out\\)" . font-lock-type-face)
+   ("^[\t ]*[a-zA-Z_0-9]+[ \\\n]" . font-lock-function-name-face)
+;   ("\\([a-zA-Z_0-9]+\\|\\([<= ]+\\w+>\\)\\)" . font-lock-constant-face)
+  )
+)
+
+(define-derived-mode fidl-lang-mode fundamental-mode
+  (setq font-lock-defaults '(fidlKeywords))
+  (setq mode-name "fidl")
+)
+
 (add-to-list 'auto-mode-alist '("\\.atm\\|\\.meta\\'" . rtext-lang-mode))
+(add-to-list 'auto-mode-alist '("\\.fidl\\|\\.fdepl\\'" . fidl-lang-mode))
 (add-to-list 'auto-mode-alist '("\\.ts\\'" . js-mode))
+(add-to-list 'auto-mode-alist '("\\.ejs\\'" . html-mode))
 
 (require 'tabbar)
 (tabbar-mode t)
@@ -127,7 +144,7 @@ Emacs buffer are those starting with “*”."
     (t
      "User Buffer"
      )
-    ))) 
+    )))
 
 (setq tabbar-buffer-groups-function 'tabbar-buffer-groups)
 
