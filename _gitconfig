@@ -7,3 +7,10 @@
 	templatedir = ~/.git_template
 [core]
 	autocrlf = false
+[filesystem "Private Build|1.8.0_222|/dev/sda5"]
+	timestampResolution = 1001 microseconds
+	minRacyThreshold = 3636 microseconds
+[merge]
+	renameLimit = 10000
+[diff]
+	colorMoved = default

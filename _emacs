@@ -39,9 +39,10 @@
 ;;          (lambda()
 ;;            (c-set-style "linux-tabs-only")))
 
-(set-foreground-color "grey")
+(load-theme 'wombat)
+;(set-foreground-color "grey")
 ;(set-background-color "black")
-(set-background-color "#202020")
+;(set-background-color "#202020")
 (set-face-attribute 'region nil :background "#666")
 (set-default-font "Monospace 12")
 (global-font-lock-mode 1)
@@ -119,7 +120,7 @@
   (setq mode-name "fidl")
 )
 
-(add-to-list 'auto-mode-alist '("\\.atm\\|\\.meta\\'" . rtext-lang-mode))
+(add-to-list 'auto-mode-alist '("\\.atm\\|\\.meta\\|\\.svc\\'" . rtext-lang-mode))
 (add-to-list 'auto-mode-alist '("\\.fidl\\|\\.fdepl\\'" . fidl-lang-mode))
 (add-to-list 'auto-mode-alist '("\\.ts\\'" . js-mode))
 (add-to-list 'auto-mode-alist '("\\.ejs\\'" . html-mode))
