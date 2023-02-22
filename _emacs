@@ -21,6 +21,9 @@
 
 ;; disable auto indent
 
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+
 (package-initialize)
 
 (when (fboundp 'electric-indent-mode) (electric-indent-mode -1))
@@ -44,7 +47,7 @@
 ;(set-background-color "black")
 ;(set-background-color "#202020")
 (set-face-attribute 'region nil :background "#666")
-(set-default-font "Monospace 12")
+;(set-default-font "Monospace 14")
 (global-font-lock-mode 1)
 ;; this disables most syntax coloring in c++ mode?
 ;(setq font-lock-maximum-decoration
@@ -52,9 +55,9 @@
 
 ;; no auto-save
 (auto-save-mode -1)
-(setq-default make-backup-files nil)
-(setq-default auto-save-default nil)
-(setq-default auto-save-interval -1)
+(setq make-backup-files nil)
+(setq auto-save-default nil)
+(setq auto-save-interval -1)
 
 (setq-default truncate-lines nil)
 (setq-default show-trailing-whitespace t)
@@ -171,3 +174,15 @@ Emacs buffer are those starting with “*”."
     (add-hook 'before-save-hook 'gofmt-before-save)
     (setq tab-width 4)
     (setq indent-tabs-mode nil)))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(column-number-mode t))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:family "DejaVu Sans Mono" :foundry "PfEd" :slant normal :weight normal :height 143 :width normal)))))

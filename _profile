@@ -23,19 +23,23 @@ PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 xmodmap -e "keycode 118 ="
 
 export PATH="$HOME/bin/diab5.9.4.8/LINUX386/bin:$PATH"
-export PATH="$HOME/jdk1.8.0_131/bin:$PATH"
+#export PATH="$HOME/jdk1.8.0_131/bin:$PATH"
 export PATH="/home/henri/.cargo/bin:$PATH"
 export LM_LICENSE_FILE="$HOME/bin/zwrsLicense.lic"
 export ESRLABS_LICENSE_FILE="$HOME/demo.lic"
-#export CompilerPrefix=sccache
 export PYTHONPATH=/home/henri/work/bcdevo/priv/autosar-py
 export FLEXNET_ROOT=/home/henri/bin/x64_n6-11.14.0.0_v6
 export DOCKER_ID_USER=hbragge
 export ESR_BSW_ENC_DIR=/home/henri/work/bcdevo/bsw-all/autosar/bsw-tools-lic
-export ARMLMD_LICENSE_FILE="/home/henri/.ds-5/licenses/DS-5 Ultimate Edition (30-day Evaluation).lic"
-export PATH="/mnt/disk/work/ARM_Compiler_5.06u6/bin64/:$PATH"
-export PATH="~/bin/cmake/bin:$PATH"
+export TSK_OPTIONS_FILE_SW160800v6_3r1=/home/henri/licopt.txt
+#export ARMLMD_LICENSE_FILE="/home/henri/.ds-5/licenses/DS-5 Ultimate Edition (30-day Evaluation).lic"
+#export PATH="/mnt/disk/work/ARM_Compiler_5.06u6/bin64/:$PATH"
 export PATH="$PATH:/snap/bin"
+export PATH="$PATH:/home/henri/bin/TriCore/ctc/bin"
+export PATH="/home/henri/.pyenv/shims:$PATH"
+
+export CLASSPATH=".:/home/henri/bin/antlr-4.7.2-complete.jar:$CLASSPATH"
+alias antlr4='java -Xmx500M -cp "/home/henri/bin/antlr-4.7.2-complete.jar:$CLASSPATH" org.antlr.v4.Tool'
 
 ulimit -c unlimited
 

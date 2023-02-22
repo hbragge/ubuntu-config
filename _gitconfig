@@ -14,3 +14,5 @@
 	renameLimit = 10000
 [diff]
 	colorMoved = default
+[credential]
+        helper = cache --timeout 30000
