@@ -94,11 +94,11 @@
 ;(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
 
 (setq rtextKeywords
- '(("#.*" . font-lock-comment-face)
-   ("@.*" . font-lock-preprocessor-face)
-   ("[a-zA-Z_0-9]+:" . font-lock-variable-name-face)
-   ("^[\t ]*[a-zA-Z_0-9]+[ \\\n]" . font-lock-function-name-face)
-   ("\\(/[a-zA-Z_0-9]+\\)+" . font-lock-type-face)
+ '(("#.*" . font-lock-comment-face) ; comment
+   ("@.*" . font-lock-preprocessor-face) ; annotation
+   ;("[a-zA-Z_0-9]+:" . font-lock-variable-name-face)
+   ("^[\t ]*[a-zA-Z_0-9]+[ \\\n]" . font-lock-type-face) ; element type
+   ("\\(/[a-zA-Z_0-9]+\\)+" . font-lock-variable-name-face) ; references (TODO: apply to all non-string values instead?)
 ;   ("\\([a-zA-Z_0-9]+\\|\\([<= ]+\\w+>\\)\\)" . font-lock-constant-face)
   )
 )
